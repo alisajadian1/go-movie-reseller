@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package moviepb;
+
+option go_package = "./internal/proto/moviepb";
+
+message MovieRequest {
+  string          title    = 1;
+  string          caption  = 2;
+  repeated string keywords = 3;
+}
+
+message MovieId {
+  uint64 movieId = 1;
+}
+
+message MovieResponse {
+  MovieRequest movieData = 1;
+}
+
+service MovieService {
+  rpc GetMovie(MovieId) returns (MovieResponse);
+}
