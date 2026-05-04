@@ -13,7 +13,7 @@ type Config struct {
 	Production bool   `json:"production"`
 }
 
-const configPath = "config.json"
+const cfgFileName = "config.json"
 
 func LoadConfig() *Config {
 	cfg := &Config{
@@ -21,11 +21,11 @@ func LoadConfig() *Config {
 		GrpcPort: 9000,
 		DbUrl:    "",
 	}
-	_, err := os.Stat(configPath)
+	_, err := os.Stat(cfgFileName)
 	if err != nil {
 		log.Printf("No config file found => %v\n", err)
 	}
-	file, err := os.Open(configPath)
+	file, err := os.Open(cfgFileName)
 	if err != nil {
 		log.Printf("Error while reading config file=> %v\n", err)
 	}
