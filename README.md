@@ -15,7 +15,7 @@ The service exposes a **REST API** (Gin) and **gRPC** endpoints for communicatio
 
 - Go 1.22+  
 - Docker & Docker Compose  
-- [air](https://github.com/cosmtrek/air) (optional, for hot‑reloading)  
+- [air](https://github.com/air-verse/air) (optional, for hot‑reloading)  
 - PostgreSQL (local or via Docker)
 
 ## Project Structure (high‑level)

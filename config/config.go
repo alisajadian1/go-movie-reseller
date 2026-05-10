@@ -17,9 +17,10 @@ const cfgFileName = "config.json"
 
 func LoadConfig() *Config {
 	cfg := &Config{
-		Port:     4000,
-		GrpcPort: 9000,
-		DbUrl:    "",
+		Port:       4000,
+		GrpcPort:   9000,
+		DbUrl:      "",
+		Production: false,
 	}
 	_, err := os.Stat(cfgFileName)
 	if err != nil {
