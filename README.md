@@ -116,3 +116,4 @@ This brings up both the **movie‑reseller** service and a PostgreSQL instance d
 
 - [ ] Web socket for real‑time support  
 - [ ] Comprehensive testing (unit, integration, e2e)
+- [ ] how you doin?
